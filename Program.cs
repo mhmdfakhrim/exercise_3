@@ -12,7 +12,7 @@ namespace exercise_3
         public int rollNumber;
         public string name;
         public Node next;
-        
+
     }
     class CircularList
     {
@@ -49,7 +49,7 @@ namespace exercise_3
                         Console.WriteLine("\nRecords in the list are:\n");
                         Node currentNode;
                         currentNode = LAST.next;
-                        while(currentNode != LAST)
+                        while (currentNode != LAST)
                         {
                             Console.Write(currentNode.rollNumber + "     " + currentNode.name + "\n");
                             currentNode = currentNode.next;
@@ -59,6 +59,14 @@ namespace exercise_3
                 }
                 public void firstNode()
                 {
-                    if(listEmpty())
+                    if (listEmpty())
+                        Console.WriteLine("\nList is empty");
+                    else
+                        Console.WriteLine("\nThe first record in the list is:\n\n " + LAST.next.rollNumber + "   " + LAST.next.name);
                 }
+
+            }
+        }
+    }
+}
 
